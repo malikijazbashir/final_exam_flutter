@@ -1,17 +1,15 @@
 import 'dart:async';
-
-import 'package:firebaseAuth/components/faderoute.dart';
-import 'package:firebaseAuth/screens/view.dart';
+import 'package:final_flutter_exam/components/faderoute.dart';
+import 'package:final_flutter_exam/data/models.dart';
+import 'package:final_flutter_exam/screens/edit.dart';
+import 'package:final_flutter_exam/screens/view.dart';
+import 'package:final_flutter_exam/services/database.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 //import 'package:notes/components/faderoute.dart';
 //import 'package:notes/screens/view.dart';
-import 'package:firebaseAuth/data/models.dart';
-import 'package:firebaseAuth/screens/edit.dart';
-import 'package:firebaseAuth/services/database.dart';
 import 'settings.dart';
-import 'package:outline_material_icons/outline_material_icons.dart';
 import '../components/cards.dart';
 class MyHomePage extends StatefulWidget {
   Function(Brightness brightness) changeTheme;
@@ -50,6 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    var OMIcons;
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(
         backgroundColor: Theme.of(context).primaryColor,
@@ -112,6 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 //search the notes
   Widget buildButtonRow() {
+    var OMIcons;
     return Padding(
       padding: const EdgeInsets.only(left: 10, right: 10),
       child: Row(
