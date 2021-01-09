@@ -42,6 +42,19 @@ class NotesDatabaseService {
     }
     return notesList;
   }
+  updateNoteInDB(NotesModel updatedNote) async {
+    final db = await database;
+    await db.update('Notes', updatedNote.toMap(),
+        where: '_id = ?', whereArgs: [updatedNote.id]);
+    print('Note updated: ${updatedNote.title} ${updatedNote.content}');
+  }
+
+  deleteNoteInDB(NotesModel noteToDelete) async {
+    final db = await database;
+    await db.delete('Notes', where: '_id = ?', whereArgs: [noteToDelete.id]);
+    print('Note deleted');
+  }
+
   Future<NotesModel> addNoteInDB(NotesModel newNote) async {
     final db = await database;
     if (newNote.title.trim().isEmpty) newNote.title = 'Untitled Note';

@@ -210,7 +210,4 @@ class _SettingsPageState extends State<SettingsPage> {
     setThemeinSharedPref(value);
   }
 
-  void openGitHub() {
-    launch('https://www.github.com/roshanrahman');
-  }
 }
