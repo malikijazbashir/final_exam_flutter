@@ -156,7 +156,7 @@ class _ViewNotePageState extends State<ViewNotePage> {
                   triggerRefetch: widget.triggerRefetch,
                 )));
   }
-
+//share notes to messages anon whatsapp
   void handleShare() {
     Share.share(
         '${widget.currentNote.title.trim()}\n(On: ${widget.currentNote.date.toIso8601String().substring(0, 10)})\n\n${widget.currentNote.content}');

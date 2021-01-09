@@ -30,22 +30,10 @@ class _MainPageState extends State<MainPage> {
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
               ),
             ),
-            Container(
-              child: OutlineButton(
-                child: Text("LogOut"),
-                onPressed: () {
-                  _signOut().whenComplete(() {
-                  });
-                },
-              ),
-            ),
           ],
         ),
       ),
     );
   }
 
-  Future _signOut() async {
-    await _auth.signOut();
-  }
 }

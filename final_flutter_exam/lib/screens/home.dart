@@ -13,7 +13,6 @@ import 'package:firebaseAuth/services/database.dart';
 import 'settings.dart';
 import 'package:outline_material_icons/outline_material_icons.dart';
 import '../components/cards.dart';
-
 class MyHomePage extends StatefulWidget {
   Function(Brightness brightness) changeTheme;
   MyHomePage({Key key, this.title, Function(Brightness brightness) changeTheme})
@@ -26,7 +25,6 @@ class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
-
 class _MyHomePageState extends State<MyHomePage> {
   bool isFlagOn = false;
   bool headerShouldHide = false;
@@ -112,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
-
+//search the notes
   Widget buildButtonRow() {
     return Padding(
       padding: const EdgeInsets.only(left: 10, right: 10),
@@ -138,7 +136,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   border: Border.all(
                     width: isFlagOn ? 2 : 1,
                     color:
-                        isFlagOn ? Colors.blue.shade700 : Colors.grey.shade300,
+                    isFlagOn ? Colors.blue.shade700 : Colors.grey.shade300,
                   ),
                   borderRadius: BorderRadius.all(Radius.circular(16))),
             ),
@@ -166,7 +164,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       autofocus: false,
                       keyboardType: TextInputType.text,
                       style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                      TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                       textInputAction: TextInputAction.search,
                       decoration: InputDecoration.collapsed(
                         hintText: 'Search',

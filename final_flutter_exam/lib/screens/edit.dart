@@ -10,7 +10,6 @@ import 'package:flutter/widgets.dart';
 import 'package:firebaseAuth/data/models.dart';
 import 'package:firebaseAuth/services/database.dart';
 import 'package:outline_material_icons/outline_material_icons.dart';
-
 class EditNotePage extends StatefulWidget {
   Function() triggerRefetch;
   NotesModel existingNote;
